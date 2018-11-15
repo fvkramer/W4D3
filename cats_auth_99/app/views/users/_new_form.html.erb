@@ -1,0 +1,15 @@
+<% if @user.logged_in? %>
+  <% action_type = users_url(@user) %>
+  <% submit_value = "Sign Up" %>
+<% else %>
+  <% action_type = session_url %>
+  <% submit_value %>
+<form action="<%= users_url(@user) %>" method="post">
+Username: 
+<input type="text" name="user[user_name]" value="">
+<br>
+Password: 
+<input type="text" name="user[password]" value="">
+<br>
+<input type="submit" name="" value=<%= submit_value %>>
+</form>
