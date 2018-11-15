@@ -36,5 +36,3 @@ class User < ApplicationRecord
   end
   
 end
-
-#u = User.new(user_name: "Christine", password: "pham123")

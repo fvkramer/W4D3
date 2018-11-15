@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <h1> <% if @user.logged_in? %>
+          <%= @user.user_name %>
+        <% end %>
+    </h1>
+    
+    <input type="submit" name="" value=<%= @user.logged_in? ? "Logout" : "Login" %>>
     <%= yield %>
   </body>
 </html>
